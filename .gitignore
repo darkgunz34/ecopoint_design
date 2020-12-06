@@ -1,0 +1,4 @@
+#Git inigore pour le design
+/.idea
+*.log
+*.iml
