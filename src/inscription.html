@@ -1,46 +1,87 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="scren" href="css/inscription_tablette.css" />
+    <link rel="stylesheet" href="css/inscription.css" >
     <title>Connexion à Eco'point</title>
 </head>
 <body>
-<main>
-    <h2>Inscription</h2>
-    <form action="#" method="POST">
-        <div>
-            <label for="nom">Nom : *</label>
-            <input type="text" placeholder="Votre nom" id="nom" required/>
+    <!-- @include header -->
+        <!-- <img src="media/composant/bandeau_wave.png" width="50%">
+
+        <img src="media/composant/bandeau.png" width="75%" height="25%" class="img_bandeau_wave" >
+        -->
+    <div id="global">
+
+        <div class="css_bandeau_wave">
+            <h2 id="css_h2">Créer un compte</h2>
+            <p>Vous avez déjà un compte ? <a href="seconnecter.html">Se connecter</a></p>
         </div>
-        <div>
-            <label for="prenom">Prénom : *</label>
-            <input type="text" placeholder="Votre prénom" id="prenom" required/>
-        </div>
-        <div>
-            <label for="telephone">Téléphone : *</label>
-            <input type="tel" placeholder="0601010101" id="telephone" required/>
-        </div>
-        <div>
-            <label for="adresse">Adresse : *</label>
-            <input type="text" placeholder="exemple" id="adresse" required/>
-        </div>
-        <div>
-            <label for="mail">Mail : *</label>
-            <input type="email" placeholder="contact@ecopoint.fr" id="mail" required/>
-        </div>
-        <div>
-            <label for="motDePasse">Mot de passe : *</label>
-            <input type="password" placeholder="***********" id="motDePasse" required/>
-        </div>
-        <div>
-            <label for="motDePasse2">Confirmation mot de passe : *</label>
-            <input type="password" placeholder="***********" id="motDePasse2" required/>
-        </div>
-        <div>
-            <input type="submit" value="S'inscrire">
-        </div>
-    </form>
-</main>
+        <main>
+            <form action="#" method="POST" class="css_form">
+                <div class="css_ajustement_de_comportement">
+                    <div class="css_form_label_input_nom">
+                        <label for="nom">Nom : </label>
+                        <input type="text" placeholder="Nom" id="nom" required/>
+                    </div>
+                    <div class="css_form_label_input_prenom">
+                        <label for="prenom">Prénom : </label>
+                        <input type="text" placeholder="Prénom" id="prenom" required/>
+                    </div>
+                </div>
+                <div class="css_form_label_input">
+                    <label for="telephone">Téléphone : </label>
+                    <input type="tel" placeholder="Téléphone" id="telephone" required/>
+                </div>
+                <div class="css_form_label_input">
+                    <label for="adresse">Adresse : </label>
+                    <input type="text" placeholder="Adresse" id="adresse" required/>
+                </div>
+                <div class="css_form_label_input">
+                    <label for="mail">E-mail : </label>
+                    <input type="email" placeholder="E-mail" id="mail" required/>
+                </div>
+                <div class="css_form_label_input">
+                    <label for="code_postale">Code postal :</label>
+                    <input id="code_postale" type="number" placeholder="Code postal" name="code_postale"/>
+                </div>
+                <div class="css_form_label_input">
+                    <label for="ville">Ville :</label>
+                    <input id="ville" type="text" placeholder="Ville" name="ville"/>
+                </div>
+                <div class="css_form_label_input">
+                    <label for="pays">Pays :</label>
+                    <input id="pays" type="text" placeholder="Pays" name="pays"/>
+                </div>
+                <div class="css_form_label_input">
+                    <label for="motDePasse">Mot de passe : </label>
+                    <input type="password" placeholder="Mot de passe" id="motDePasse" required/>
+                </div>
+                <div class="css_form_label_input">
+                    <label for="motDePasse2">Confirmation<br /> mot de passe : </label>
+                    <input type="password" placeholder="Confirmations de mot de passe" id="motDePasse2" required/>
+                </div>
+                <div>
+                    <input type="checkbox" id="engagement" name="engagement">
+                    <label for="engagement" id="text_coche">
+                        Nous vous enverrons régulièrement des e-mails avec des offres concernant nos services.<br />
+                            Vous pouvez vous désinscrire de ces e-mails marketing en tout temps,<br />
+                            sans frais, en cliquant sur le lien inclus dans les e-mails.<br />
+                    </label>
+                </div>
+                <br />
+                <p>
+                    En cliquant sur S’inscrire, vous confirmez avoir lu et accepté les <a href="#">Conditions d’utilisation</a>. <br />
+                    Veuillez vous référer à notre Avis sur les données personnelles pour toute information concernant le traitement de vos données.
+                </p>
+                <div class ="css_ajustement_position_button">
+                    <input type="submit" value="S'inscrire" class="css_button">
+                </div>
+            </form>
+        </main>
+    </div>
+<!-- @Include footer -->
 </body>
 </html>
