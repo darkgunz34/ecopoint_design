@@ -3,31 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/connexion.css" />
     <title>Connexion à Eco'point</title>
 </head>
 <body>
-<main>
-    <h2>Connexion</h2>
-    <form id="formulaire" method="POST">
-        <div>
-            <label for="mail">Adresse mail :</label>
-            <input type="email" id="mail"  placeholder="Adresse mail" required/>
-        </div>
-        <div>
-            <label for="password">Mot de passe :</label>
-            <input id="password" name="mot_de_passe" type="password" placeholder="Mot de passe" required>
-        </div>
-        <div>
-            <a href="#">Mot de passe oublié</a>
-        </div>
-        <div>
-            <button type="submit" id="valide" name="connexion">Connexion</button>
-        </div>
-    </form>
-    <div>
-        <p>Vous n'avez pas de compte ?</p>
-        <a href="#">INSCRIVEZ-VOUS</a>
+<div id="global">
+    <div class="css_bandeau_wave">
+        <h2 id="css_h2">Se connecter</h2>
+        <p>Pas encore inscrit ? <a href="inscription.html">S'inscrire'</a></p>
     </div>
-</main>
+    <main>
+        <form id="formulaire" method="POST" class="css_form">
+            <div class="css_form_label_input">
+                <label for="mail">Adresse mail :</label>
+                <input type="email" id="mail"  placeholder="Adresse mail" required/>
+            </div>
+            <div class="css_form_label_input">
+                <label for="password">Mot de passe :</label>
+                <input id="password" name="mot_de_passe" type="password" placeholder="Mot de passe" required>
+            </div>
+            <div>
+                <p id="css_pw_oublier">Mot de passe <a href="#">oublié</a>  ?</p>
+            </div>
+            <div class ="css_ajustement_position_button">
+                <input type="submit" value="Se connecter" class="css_button">
+            </div>
+        </form>
+        <!--<div>
+            <p>Vous n'avez pas de compte ?</p>
+            <a href="#">INSCRIVEZ-VOUS</a>
+        </div> -->
+    </main>
+</div>
 </body>
 </html>
