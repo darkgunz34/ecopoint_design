@@ -42,13 +42,19 @@ main{
     text-align: center;
 }
 .css_form{
-
+    width: 60%;
 }
 .css_form_label_input > label{
     /**font-weight: bold;*/
     display: block;
     width: 8em;
     float: left;
+}
+
+#css_pw_oublier{
+    text-decoration: none;
+    text-align: center;
+    font-size: 1em;
 }
 
 .css_form_label_input > input{
