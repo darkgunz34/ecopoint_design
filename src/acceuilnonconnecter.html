@@ -3,42 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/aceuil.css" />
     <title>Accueil Eco'point</title>
 
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFUW-ukykKzEWyqXevA8MxnXsxgoO9iSY&callback=initMap&libraries=&v=weekly" defer></script>
-    <script src="js/map.js"></script>
     <link rel="stylesheet" href="css/map.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.1/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.1/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.1/dist/chart.esm.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.1/dist/helpers.esm.min.js"></script>
+    <script src="js/charjs_acceuil.js"></script>
 </head>
 <body>
-    <div>
-        <p>ECO'POINT RÉCOMPENSE LES GESTES ÉCOLOGIQUES</p>
+    <div class="css_titre">
+        <p><span>ECO'POINT</span><br> RÉCOMPENSE LES GESTES ÉCOLOGIQUES</p>
     </div>
-    <div>
-        <p><b>ECO’POINT</b><b>c’est quoi ?</b></p>
+    <div class="css_phrase_accroche">
+        <p><b class="change_color_jaune">ECO’POINT</b> <b class="change_color_blanc">c’est quoi ?</b></p>
         <p>
-            Notre but est de sensibiliser au maximum les citoyens d’aujourd’hui en mettant à disposition des bornes de collecte connectées afin de recycler les déchets !
+            Notre but est de sensibiliser au maximum les citoyens d’aujourd’hui en mettant à disposition un ensemble de bonne pratique pour tous déchets, une question ? Une interrogation ?<br/>
+            Nous vous expliquerons tout sur le recyclage de vos produits.
         </p>
         <div>
-            <button><a href="#">En savoir plus</a></button>
+            <button class="css_button"><a href="#">En savoir plus</a></button>
         </div>
     </div>
-    <div>
-        <p><b>Où SE TROUVE LES BORNES COLLECTS ?</b></p>
+    <div class="css_inforamtion">
+        <p>Vous êtes de plus en plus nombreux a venir nous rejoindre dans notre démarche éco-responsable qui a pour but de protéger écosystème de notre belle planète</p>
     </div>
-    <div id="map">
-        <!-- Google map -->
+    <div class="css_phrase_accroche">
+        <p>Quelque chiffre a titre informatif, le mois dernier vous avez était plus de 305 membre a participer a notre sensibilisations  et plus de 110 information on était demander pour le recyclage des déchets.</p>
     </div>
-    <div>
-        <p><b>Nos partenaires</b></p>
-        <div>
-            <div>
-                <img src="#" alt="Image">
-            </div>
-            <div>
-                <img src="#" alt="Image" >
-            </div>
-        </div>
+    <div class="CharJS">
+        <canvas id="NumberOfParticipation" width="200px"></canvas>
+        <script>
+            var ctx = document.getElementById('NumberOfParticipation').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
+                    datasets: [{
+                        label: 'Nombre maximum de participation a notre sensibilitation par mois',
+                        data: [243, 268, 289, 305, 154],
+                        backgroundColor: ['rgb(245, 215, 114)'],
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        },
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                font: {
+                                    size: 18,
+                                    family:"Futura Std bold",
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
     </div>
 </body>
 </html>
